@@ -1,0 +1,15 @@
+---
+-name: provisionin of s3 bucket
+hosts: localhost
+connection: local
+gather_facts: False
+
+tasks:
+ -name: creating the s3 bucket
+ s3 bucket:
+   name: newansiblebucket
+   state: present
+   region: mumbai
+   versioning: Yes
+   
+
